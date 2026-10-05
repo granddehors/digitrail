@@ -1,0 +1,8 @@
+# Maquettes de référence : à ne pas livrer en production
+/maquettes/
+
+# Dépendances et fichiers système
+/vendor/
+/node_modules/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,51 @@
+{
+  "key": "group_dgt_page_podcast",
+  "title": "Page podcast",
+  "fields": [
+    { "key": "field_dgt_pp_t_hero", "label": "Héro", "name": "", "type": "tab", "placement": "top" },
+    {
+      "key": "field_dgt_pp_hero_image", "label": "Photo de fond", "name": "hero_image", "type": "image", "required": 1,
+      "return_format": "id", "preview_size": "medium", "library": "all", "mime_types": "jpg,jpeg,png,webp"
+    },
+    { "key": "field_dgt_pp_hero_surtitre", "label": "Surtitre", "name": "hero_surtitre", "type": "text" },
+    { "key": "field_dgt_pp_hero_titre", "label": "Titre", "name": "hero_titre", "type": "text", "required": 1 },
+    { "key": "field_dgt_pp_hero_chapo", "label": "Chapô", "name": "hero_chapo", "type": "textarea", "rows": 3, "new_lines": "" },
+
+    { "key": "field_dgt_pp_t_skyline", "label": "La Skyline", "name": "", "type": "tab", "placement": "top" },
+    {
+      "key": "field_dgt_pp_sky_info", "label": "", "name": "", "type": "message",
+      "message": "Le dernier épisode s'affiche à la une, puis six épisodes ; les suivants apparaissent avec le bouton « Voir les autres épisodes ». Les liens des plateformes se règlent dans « Réglages du site »."
+    },
+    { "key": "field_dgt_pp_sky_surtitre", "label": "Surtitre", "name": "skyline_surtitre", "type": "text" },
+    { "key": "field_dgt_pp_sky_titre", "label": "Titre", "name": "skyline_titre", "type": "text" },
+    { "key": "field_dgt_pp_sky_chapo", "label": "Introduction", "name": "skyline_chapo", "type": "textarea", "rows": 4, "new_lines": "" },
+
+    { "key": "field_dgt_pp_t_interviews", "label": "Interviews", "name": "", "type": "tab", "placement": "top" },
+    {
+      "key": "field_dgt_pp_int_info", "label": "", "name": "", "type": "message",
+      "message": "Le nombre d'interviews et leur durée moyenne s'affichent automatiquement sous l'introduction."
+    },
+    { "key": "field_dgt_pp_int_surtitre", "label": "Surtitre", "name": "interviews_surtitre", "type": "text" },
+    { "key": "field_dgt_pp_int_titre", "label": "Titre", "name": "interviews_titre", "type": "text" },
+    { "key": "field_dgt_pp_int_chapo", "label": "Introduction", "name": "interviews_chapo", "type": "textarea", "rows": 4, "new_lines": "" },
+
+    { "key": "field_dgt_pp_t_contact", "label": "Bandeau de contact", "name": "", "type": "tab", "placement": "top" },
+    { "key": "field_dgt_pp_band_titre", "label": "Titre", "name": "bandeau_titre", "type": "text" },
+    { "key": "field_dgt_pp_band_texte", "label": "Texte", "name": "bandeau_texte", "type": "textarea", "rows": 2, "new_lines": "" }
+  ],
+  "location": [
+    [
+      { "param": "page_template", "operator": "==", "value": "page-templates/podcast.php" }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "seamless",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": ["the_content"],
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790600000
+}

@@ -1,0 +1,54 @@
+{
+  "key": "group_dgt_podcast",
+  "title": "Épisode",
+  "fields": [
+    {
+      "key": "field_dgt_pod_info", "label": "", "name": "", "type": "message",
+      "message": "Les épisodes sont créés automatiquement depuis le flux Ausha (Podcasts > Synchroniser). Vous pouvez modifier le titre, le résumé (extrait), le format et l'invité : la synchronisation ne les écrase pas. Pour retirer un épisode du site, passez-le en brouillon."
+    },
+    {
+      "key": "field_dgt_pod_format", "label": "Format", "name": "dgt_format", "type": "radio",
+      "choices": { "skyline": "La Skyline (podcast)", "interview": "L'interview digitale" },
+      "default_value": "skyline", "layout": "horizontal", "return_format": "value", "required": 1
+    },
+    {
+      "key": "field_dgt_pod_invite", "label": "Invité", "name": "dgt_invite", "type": "text",
+      "instructions": "Affiché en titre des cartes d'interview. Vide : le titre de l'épisode."
+    },
+    {
+      "key": "field_dgt_pod_hors_serie", "label": "Hors-série", "name": "dgt_hors_serie", "type": "true_false",
+      "ui": 1, "default_value": 0
+    },
+    {
+      "key": "field_dgt_pod_audio", "label": "Fichier audio (MP3 Ausha)", "name": "dgt_audio", "type": "url",
+      "instructions": "Rempli par la synchronisation."
+    },
+    {
+      "key": "field_dgt_pod_duree", "label": "Durée (secondes)", "name": "dgt_duree", "type": "number",
+      "instructions": "Rempli par la synchronisation.", "min": 0
+    },
+    {
+      "key": "field_dgt_pod_lien", "label": "Page de l'épisode sur Ausha", "name": "dgt_lien_ausha", "type": "url",
+      "instructions": "Rempli par la synchronisation."
+    },
+    {
+      "key": "field_dgt_pod_guid", "label": "Identifiant Ausha", "name": "dgt_guid", "type": "text",
+      "instructions": "Ne pas modifier : sert à reconnaître l'épisode lors des synchronisations.", "readonly": 1
+    }
+  ],
+  "location": [
+    [
+      { "param": "post_type", "operator": "==", "value": "podcast" }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790600000
+}

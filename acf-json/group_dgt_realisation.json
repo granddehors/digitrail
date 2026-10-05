@@ -1,0 +1,178 @@
+{
+  "key": "group_dgt_realisation",
+  "title": "Réalisation",
+  "fields": [
+    {
+      "key": "field_dgt_real_onglet_vignette",
+      "label": "Vignette",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dgt_type_mission",
+      "label": "Type de mission",
+      "name": "dgt_type_mission",
+      "type": "text",
+      "instructions": "Au-dessus du titre sur la vignette. Deux à quatre mots, ex. « Identité et dossier partenaires ».",
+      "required": 1,
+      "maxlength": 50
+    },
+    {
+      "key": "field_dgt_accroche",
+      "label": "Accroche",
+      "name": "dgt_accroche",
+      "type": "text",
+      "instructions": "Une ligne sous le titre de la vignette, ex. « Équipe de France de trail ».",
+      "required": 0,
+      "maxlength": 70
+    },
+    {
+      "key": "field_dgt_real_onglet_contenu",
+      "label": "Contenu",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dgt_date_realisation",
+      "label": "Date de réalisation",
+      "name": "dgt_date_realisation",
+      "type": "date_picker",
+      "required": 0,
+      "display_format": "d/m/Y",
+      "return_format": "Ymd",
+      "first_day": 1
+    },
+    {
+      "key": "field_dgt_problematique",
+      "label": "Problématique, besoin du client",
+      "name": "dgt_problematique",
+      "type": "wysiwyg",
+      "instructions": "Ce que le client attendait, en 60 à 90 mots.",
+      "required": 0,
+      "tabs": "visual",
+      "toolbar": "basic",
+      "media_upload": 0,
+      "delay": 1
+    },
+    {
+      "key": "field_dgt_reponse",
+      "label": "Notre réponse",
+      "name": "dgt_reponse",
+      "type": "wysiwyg",
+      "instructions": "Ce que nous avons construit, en 60 à 90 mots.",
+      "required": 0,
+      "tabs": "visual",
+      "toolbar": "basic",
+      "media_upload": 0,
+      "delay": 1
+    },
+    {
+      "key": "field_dgt_galerie",
+      "label": "Images",
+      "name": "dgt_galerie",
+      "type": "gallery",
+      "instructions": "Quelques images du projet (six au plus). Renseigner le texte alternatif de chaque image.",
+      "required": 0,
+      "return_format": "id",
+      "library": "all",
+      "min": 0,
+      "max": 6,
+      "mime_types": "jpg,jpeg,png,webp",
+      "insert": "append",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_dgt_real_onglet_avis",
+      "label": "Avis du client",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dgt_avis",
+      "label": "Avis du client",
+      "name": "dgt_avis",
+      "type": "group",
+      "layout": "block",
+      "sub_fields": [
+        {
+          "key": "field_dgt_avis_texte",
+          "label": "Témoignage",
+          "name": "texte",
+          "type": "textarea",
+          "instructions": "Les mots du client, sans guillemets. 20 à 50 mots.",
+          "rows": 4,
+          "new_lines": ""
+        },
+        {
+          "key": "field_dgt_avis_nom",
+          "label": "Nom",
+          "name": "nom",
+          "type": "text"
+        },
+        {
+          "key": "field_dgt_avis_fonction",
+          "label": "Fonction ou palmarès",
+          "name": "fonction",
+          "type": "text",
+          "instructions": "Ex. « Ultra-traileur, vainqueur de la Hardrock 100 »."
+        }
+      ]
+    },
+    {
+      "key": "field_dgt_real_onglet_lien",
+      "label": "Lien",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dgt_site_client",
+      "label": "Site du client",
+      "name": "dgt_site_client",
+      "type": "url",
+      "instructions": "Adresse complète, ex. https://ludovicpommeret.com",
+      "required": 0
+    },
+    {
+      "key": "field_dgt_destination_clic",
+      "label": "Au clic sur la vignette",
+      "name": "dgt_destination_clic",
+      "type": "radio",
+      "required": 1,
+      "choices": {
+        "page": "Ouvrir la page de la réalisation",
+        "site": "Ouvrir le site du client (nouvel onglet)"
+      },
+      "default_value": "page",
+      "layout": "vertical",
+      "return_format": "value",
+      "allow_null": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "realisation"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "seamless",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1791000000
+}

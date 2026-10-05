@@ -1,0 +1,17 @@
+/*
+Theme Name: Digitrail
+Theme URI: https://digitrail.run
+Author: Digitrail
+Author URI: https://digitrail.run
+Description: Thème sur mesure de l'agence de communication des sports outdoor.
+Version: 1.0.0
+Requires at least: 6.5
+Tested up to: 7.1
+Requires PHP: 8.2
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: digitrail
+
+Ce fichier ne sert qu'à déclarer le thème auprès de WordPress.
+Les styles sont dans assets/css/ : variables.css (jetons de la charte) et principal.css.
+*/

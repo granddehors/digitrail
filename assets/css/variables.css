@@ -1,0 +1,127 @@
+/*
+ * Digitrail : jetons de la charte 2027.
+ * Seul fichier du thème où figurent des valeurs brutes (couleurs, polices, tailles de base).
+ * Chargé sur le site et dans l'éditeur de blocs.
+ */
+
+/* ---------- Polices auto-hébergées (variables, sous-ensemble latin) ---------- */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url("../polices/archivo-variable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Archivo Narrow";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../polices/archivo-narrow-variable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 75% 100%;
+  font-display: swap;
+  src: url("../polices/instrument-sans-variable.woff2") format("woff2");
+}
+
+:root {
+  /* Couleurs d'identité */
+  --vert-digitrail: #20cc6e;
+  --vert-clair: #4be291;
+  --vertprofond: #0f7a42;
+  --bleu-nuit: #253d6b;
+  --bleu-nuit-profond: #1a2c4e;
+  --anis: #aacc21;
+  --encre: #0e1714;
+  --encre-eleve: #16211d;
+  --grisclair: #f5f5f5;
+  --blanc: #ffffff;
+
+  /*
+   * Tout ce qui suit dérive des couleurs d'identité ci-dessus : une couleur
+   * modifiée dans Apparence > Personnaliser (inc/personnalisation.php) se propage
+   * aux voiles, filets et rôles.
+   */
+
+  /* Voiles (en-tête fixe, dégradés sur photo) */
+  --voile-encre: color-mix(in srgb, var(--encre) 86%, transparent);
+  --voile-vert: color-mix(in srgb, var(--vert-digitrail) 22%, transparent);
+  --voile-vert-leger: color-mix(in srgb, var(--vert-digitrail) 12%, transparent);
+  --degrade-vignette: linear-gradient(to top, color-mix(in srgb, var(--encre) 94%, transparent) 0%, color-mix(in srgb, var(--encre) 45%, transparent) 44%, color-mix(in srgb, var(--encre) 0%, transparent) 80%);
+  /* Voile du héro : encre de 86 % à 45 % minimum (charte) */
+  --degrade-hero: linear-gradient(94deg, color-mix(in srgb, var(--encre) 96%, transparent) 0%, color-mix(in srgb, var(--encre) 86%, transparent) 34%, color-mix(in srgb, var(--encre) 60%, transparent) 66%, color-mix(in srgb, var(--encre) 45%, transparent) 100%);
+  --ligne-verte: color-mix(in srgb, var(--vert-digitrail) 45%, transparent);
+  --texte-doux-sombre: #b9c2bf;        /* texte secondaire posé sur encre hors section sombre (survol) */
+
+  /* Rôles : thème clair */
+  --fond: var(--grisclair);
+  --fond-eleve: var(--blanc);
+  --fond-inverse: var(--encre);
+  --texte: var(--encre);
+  --texte-doux: #52605d;
+  --texte-inverse: var(--grisclair);
+  --accent-texte: var(--vertprofond);
+  --surtitre: var(--bleu-nuit);
+  --ligne: color-mix(in srgb, var(--bleu-nuit) 16%, transparent);
+  --ligne-forte: color-mix(in srgb, var(--bleu-nuit) 34%, transparent);
+  --focus: var(--bleu-nuit);
+
+  /* Typographie */
+  --display: "Archivo", system-ui, sans-serif;
+  --f-util: "Archivo Narrow", "Archivo", system-ui, sans-serif;
+  --f-texte: "Instrument Sans", system-ui, sans-serif;
+
+  /* Espacements : échelle de 4px */
+  --espace-1: 4px;
+  --espace-2: 8px;
+  --espace-3: 12px;
+  --espace-4: 16px;
+  --espace-5: 24px;
+  --espace-6: 32px;
+  --espace-7: 48px;
+  --espace-8: 64px;
+  --espace-9: 96px;
+  --espace-10: 140px;
+
+  /* Mise en page */
+  --max: 1340px;
+  --gouttiere: clamp(20px, 5vw, 64px);
+  --section: clamp(72px, 10vw, 140px);
+  --mesure: 68ch;                      /* longueur de ligne des paragraphes */
+  --mesure-chapo: 56ch;
+  --hauteur-entete: 68px;              /* en-tête fixe resserré */
+  --cible: 44px;                       /* cible tactile minimale */
+
+  /* Rayons : l'angle droit domine */
+  --rayon-0: 0;
+  --rayon-s: 4px;                      /* boutons, étiquettes, champs */
+  --rayon-m: 8px;                      /* cartes */
+  --rayon-l: 12px;                     /* grands panneaux */
+
+  /* Ombres : rares */
+  --ombre-carte: 0 1px 2px color-mix(in srgb, var(--encre) 5%, transparent);
+  --ombre-flottante: 0 12px 32px color-mix(in srgb, var(--encre) 14%, transparent);
+
+  /* Mouvement */
+  --courbe: cubic-bezier(.2, .7, .3, 1);
+}
+
+/* Sections sombres : appliquer data-theme="sombre" sur le conteneur */
+[data-theme="sombre"] {
+  --fond: var(--encre);
+  --fond-eleve: var(--encre-eleve);
+  --fond-inverse: var(--grisclair);
+  --texte: var(--grisclair);
+  --texte-doux: var(--texte-doux-sombre);
+  --texte-inverse: var(--encre);
+  --accent-texte: var(--vert-digitrail);
+  --surtitre: var(--vert-digitrail);
+  --ligne: color-mix(in srgb, var(--grisclair) 16%, transparent);
+  --ligne-forte: color-mix(in srgb, var(--grisclair) 32%, transparent);
+  --focus: var(--vert-clair);
+}

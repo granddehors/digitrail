@@ -1,0 +1,178 @@
+{
+  "key": "group_dgt_reglages",
+  "title": "Réglages du site",
+  "fields": [
+    {
+      "key": "field_dgt_onglet_contact",
+      "label": "Contact",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dgt_page_contact",
+      "label": "Page de contact",
+      "name": "dgt_page_contact",
+      "type": "page_link",
+      "instructions": "Destination du bouton « Parlons de votre projet » de l'en-tête et du bandeau de contact.",
+      "required": 0,
+      "post_type": ["page"],
+      "allow_null": 1,
+      "allow_archives": 0,
+      "multiple": 0
+    },
+    {
+      "key": "field_dgt_email_reception",
+      "label": "Adresse de réception des messages",
+      "name": "dgt_email_reception",
+      "type": "email",
+      "instructions": "Où arrivent les messages du formulaire de contact. Vide : adresse e-mail d'administration du site."
+    },
+    {
+      "key": "field_dgt_onglet_coordonnees",
+      "label": "Coordonnées",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dgt_email_public",
+      "label": "E-mail affiché",
+      "name": "dgt_email_public",
+      "type": "email",
+      "instructions": "Affiché sur la page de contact.",
+      "default_value": "contact@digitrail.run"
+    },
+    {
+      "key": "field_dgt_telephone",
+      "label": "Téléphone affiché",
+      "name": "dgt_telephone",
+      "type": "text",
+      "instructions": "Format lisible, ex. « 06 12 34 56 78 ». Laisser vide pour ne pas l'afficher.",
+      "default_value": "06 00 00 00 00"
+    },
+    {
+      "key": "field_dgt_adresse",
+      "label": "Adresse",
+      "name": "dgt_adresse",
+      "type": "textarea",
+      "rows": 3,
+      "new_lines": "br",
+      "default_value": "65120 Luz-Saint-Sauveur\nHautes-Pyrénées"
+    },
+    {
+      "key": "field_dgt_onglet_equipe",
+      "label": "Équipe",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dgt_equipe_info",
+      "label": "",
+      "name": "",
+      "type": "message",
+      "message": "L'équipe et le collectif s'affichent sur la page d'accueil et sur la page L'agence."
+    },
+    {
+      "key": "field_dgt_membres",
+      "label": "Membres de l'équipe",
+      "name": "dgt_membres",
+      "type": "repeater",
+      "layout": "block",
+      "button_label": "Ajouter une personne",
+      "max": 4,
+      "sub_fields": [
+        { "key": "field_dgt_membre_photo", "label": "Portrait", "name": "photo", "type": "image", "instructions": "Format 3:4, en extérieur, cadré à hauteur d'épaules, même lumière pour tous.", "return_format": "id", "preview_size": "thumbnail", "library": "all" },
+        { "key": "field_dgt_membre_nom", "label": "Nom", "name": "nom", "type": "text", "required": 1 },
+        { "key": "field_dgt_membre_role", "label": "Rôle", "name": "role", "type": "text", "instructions": "Trois mots." },
+        { "key": "field_dgt_membre_bio", "label": "Courte bio", "name": "bio", "type": "textarea", "rows": 3, "new_lines": "" },
+        { "key": "field_dgt_membre_etiquettes", "label": "Étiquettes", "name": "etiquettes", "type": "textarea", "instructions": "Une par ligne, trois au plus.", "rows": 3, "new_lines": "" },
+        { "key": "field_dgt_membre_strava", "label": "Strava", "name": "strava", "type": "url" },
+        { "key": "field_dgt_membre_instagram", "label": "Instagram", "name": "instagram", "type": "url" },
+        { "key": "field_dgt_membre_facebook", "label": "Facebook", "name": "facebook", "type": "url" }
+      ]
+    },
+    { "key": "field_dgt_collectif_nombre", "label": "Collectif : nombre", "name": "dgt_collectif_nombre", "type": "text", "instructions": "Ex. « +9 »." },
+    { "key": "field_dgt_collectif_texte", "label": "Collectif : texte", "name": "dgt_collectif_texte", "type": "text" },
+    { "key": "field_dgt_collectif_competences", "label": "Collectif : domaines", "name": "dgt_collectif_competences", "type": "textarea", "instructions": "Un par ligne.", "rows": 6, "new_lines": "" },
+    {
+      "key": "field_dgt_onglet_podcast",
+      "label": "Podcast",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dgt_flux_podcast",
+      "label": "Flux RSS Ausha",
+      "name": "dgt_flux_podcast",
+      "type": "url",
+      "instructions": "Source des épisodes (synchronisation quotidienne).",
+      "default_value": "https://feed.ausha.co/oww2GEhGK9kz"
+    },
+    {
+      "key": "field_dgt_plateformes",
+      "label": "Où écouter",
+      "name": "dgt_plateformes",
+      "type": "repeater",
+      "instructions": "Liens affichés sous l'introduction de La Skyline et sur chaque épisode.",
+      "layout": "table",
+      "button_label": "Ajouter une plateforme",
+      "sub_fields": [
+        { "key": "field_dgt_plat_nom", "label": "Nom", "name": "nom", "type": "text" },
+        { "key": "field_dgt_plat_url", "label": "Adresse", "name": "url", "type": "url" }
+      ]
+    },
+    {
+      "key": "field_dgt_onglet_pied",
+      "label": "Pied de page",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dgt_pied_presentation",
+      "label": "Présentation",
+      "name": "dgt_pied_presentation",
+      "type": "textarea",
+      "instructions": "Deux phrases au plus, sous le logo. Mettre un mot en gras avec <b>…</b>.",
+      "required": 0,
+      "rows": 3,
+      "new_lines": "",
+      "default_value": "L'agence de communication des sports outdoor. Installée à <b>Luz-Saint-Sauveur</b>, au cœur des Hautes-Pyrénées, entre le Tourmalet et le cirque de Gavarnie."
+    },
+    {
+      "key": "field_dgt_pied_adresse",
+      "label": "Ligne de lieu",
+      "name": "dgt_pied_adresse",
+      "type": "text",
+      "required": 0,
+      "default_value": "65120 Luz-Saint-Sauveur · Hautes-Pyrénées"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "dgt-reglages"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790700000
+}

@@ -1,0 +1,86 @@
+{
+  "key": "group_dgt_agence",
+  "title": "Page L'agence",
+  "fields": [
+    { "key": "field_dgt_ag_t_hero", "label": "Héro", "name": "", "type": "tab", "placement": "top" },
+    {
+      "key": "field_dgt_ag_hero_image", "label": "Photo de fond", "name": "hero_image", "type": "image", "required": 1,
+      "return_format": "id", "preview_size": "medium", "library": "all", "mime_types": "jpg,jpeg,png,webp"
+    },
+    { "key": "field_dgt_ag_hero_surtitre", "label": "Surtitre", "name": "hero_surtitre", "type": "text" },
+    { "key": "field_dgt_ag_hero_titre", "label": "Titre", "name": "hero_titre", "type": "text", "required": 1 },
+    { "key": "field_dgt_ag_hero_chapo", "label": "Chapô", "name": "hero_chapo", "type": "textarea", "rows": 3, "new_lines": "" },
+    { "key": "field_dgt_ag_hero_bouton", "label": "Bouton secondaire", "name": "hero_bouton", "type": "link", "instructions": "Le bouton « Parlons de votre projet » est fixe.", "return_format": "array" },
+
+    { "key": "field_dgt_ag_t_pres", "label": "Présentation", "name": "", "type": "tab", "placement": "top" },
+    { "key": "field_dgt_ag_pres_surtitre", "label": "Surtitre", "name": "presentation_surtitre", "type": "text" },
+    { "key": "field_dgt_ag_pres_titre", "label": "Titre", "name": "presentation_titre", "type": "text" },
+    { "key": "field_dgt_ag_pres_texte", "label": "Texte", "name": "presentation_texte", "type": "textarea", "instructions": "Un paragraphe par ligne vide.", "rows": 8, "new_lines": "wpautop" },
+    {
+      "key": "field_dgt_ag_chiffres", "label": "Chiffres clés", "name": "chiffres", "type": "repeater", "layout": "table", "button_label": "Ajouter un chiffre", "max": 4,
+      "sub_fields": [
+        { "key": "field_dgt_ag_chiffre_valeur", "label": "Valeur", "name": "valeur", "type": "text", "instructions": "Ex. « +15 »." },
+        { "key": "field_dgt_ag_chiffre_libelle", "label": "Libellé", "name": "libelle", "type": "text" }
+      ]
+    },
+    {
+      "key": "field_dgt_ag_photo", "label": "Photo des bureaux", "name": "presentation_photo", "type": "image",
+      "instructions": "Facultatif. Tant qu'elle est vide, un emplacement « Photo des bureaux à venir » s'affiche.",
+      "return_format": "id", "preview_size": "medium", "library": "all", "mime_types": "jpg,jpeg,png,webp"
+    },
+    { "key": "field_dgt_ag_photo_legende", "label": "Légende de la photo", "name": "presentation_legende", "type": "text" },
+
+    { "key": "field_dgt_ag_t_equipe", "label": "Équipe", "name": "", "type": "tab", "placement": "top" },
+    {
+      "key": "field_dgt_ag_equipe_info", "label": "", "name": "", "type": "message",
+      "message": "Les personnes (photo, rôle, bio, réseaux) et le collectif se modifient dans « Réglages du site > Équipe » : ils sont partagés avec la page d'accueil."
+    },
+    { "key": "field_dgt_ag_eq_surtitre", "label": "Surtitre", "name": "equipe_surtitre", "type": "text" },
+    { "key": "field_dgt_ag_eq_titre", "label": "Titre", "name": "equipe_titre", "type": "text" },
+    { "key": "field_dgt_ag_eq_chapo", "label": "Chapô", "name": "equipe_chapo", "type": "textarea", "rows": 2, "new_lines": "" },
+
+    { "key": "field_dgt_ag_t_metiers", "label": "Ce que nous faisons", "name": "", "type": "tab", "placement": "top" },
+    { "key": "field_dgt_ag_met_surtitre", "label": "Surtitre", "name": "metiers_surtitre", "type": "text" },
+    { "key": "field_dgt_ag_met_titre", "label": "Titre", "name": "metiers_titre", "type": "text" },
+    { "key": "field_dgt_ag_met_chapo", "label": "Chapô", "name": "metiers_chapo", "type": "textarea", "rows": 2, "new_lines": "" },
+    {
+      "key": "field_dgt_ag_metiers", "label": "Métiers", "name": "metiers", "type": "repeater", "layout": "block", "button_label": "Ajouter un métier",
+      "sub_fields": [
+        { "key": "field_dgt_ag_metier_titre", "label": "Titre", "name": "titre", "type": "text" },
+        { "key": "field_dgt_ag_metier_texte", "label": "Texte", "name": "texte", "type": "textarea", "instructions": "20 à 30 mots.", "rows": 2, "new_lines": "" }
+      ]
+    },
+
+    { "key": "field_dgt_ag_t_avis", "label": "Avis clients", "name": "", "type": "tab", "placement": "top" },
+    { "key": "field_dgt_ag_avis_surtitre", "label": "Surtitre", "name": "avis_surtitre", "type": "text" },
+    { "key": "field_dgt_ag_avis_titre", "label": "Titre", "name": "avis_titre", "type": "text" },
+    {
+      "key": "field_dgt_ag_avis", "label": "Avis", "name": "avis", "type": "repeater", "layout": "block", "button_label": "Ajouter un avis",
+      "sub_fields": [
+        { "key": "field_dgt_ag_avis_texte", "label": "Avis", "name": "texte", "type": "textarea", "instructions": "Les mots du client, sans guillemets.", "rows": 4, "new_lines": "" },
+        { "key": "field_dgt_ag_avis_nom", "label": "Nom", "name": "nom", "type": "text" },
+        { "key": "field_dgt_ag_avis_profil", "label": "Profil", "name": "profil", "type": "text", "instructions": "Ex. « Coach sportif »." },
+        { "key": "field_dgt_ag_avis_note", "label": "Note", "name": "note", "type": "number", "min": 1, "max": 5, "step": 1, "default_value": 5 }
+      ]
+    },
+
+    { "key": "field_dgt_ag_t_contact", "label": "Bandeau de contact", "name": "", "type": "tab", "placement": "top" },
+    { "key": "field_dgt_ag_band_titre", "label": "Titre", "name": "bandeau_titre", "type": "text" },
+    { "key": "field_dgt_ag_band_texte", "label": "Texte", "name": "bandeau_texte", "type": "textarea", "rows": 2, "new_lines": "" }
+  ],
+  "location": [
+    [
+      { "param": "page_template", "operator": "==", "value": "page-templates/agence.php" }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "seamless",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": ["the_content"],
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790700000
+}

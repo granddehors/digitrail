@@ -1,0 +1,60 @@
+/*
+ * Digitrail : aperçu dans l'éditeur de blocs.
+ * WordPress préfixe ces règles par .editor-styles-wrapper ; « body » désigne la zone d'édition.
+ */
+
+body {
+  background: var(--fond);
+  color: var(--texte);
+  font-family: var(--f-texte);
+  font-size: 17px;
+  line-height: 1.62;
+  font-variant-numeric: tabular-nums;
+}
+.wp-block {
+  max-width: var(--mesure);
+}
+.wp-block[data-align="wide"],
+.wp-block.alignwide {
+  max-width: var(--max);
+}
+.wp-block[data-align="full"],
+.wp-block.alignfull {
+  max-width: none;
+}
+.editor-post-title,
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--display);
+  font-weight: 800;
+  line-height: .96;
+  letter-spacing: -.03em;
+  text-wrap: balance;
+}
+.editor-post-title {
+  font-size: clamp(2.25rem, 5vw, 4.25rem);
+  letter-spacing: -.035em;
+}
+h2 {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+}
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+a {
+  color: var(--accent-texte);
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+blockquote {
+  padding-left: var(--espace-5);
+  border-left: 2px solid var(--vert-digitrail);
+  font-size: 1.15rem;
+}
+figcaption {
+  font-size: .8rem;
+  color: var(--texte-doux);
+}

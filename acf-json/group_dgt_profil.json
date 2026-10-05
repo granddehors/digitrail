@@ -1,0 +1,578 @@
+{
+    "key": "group_dgt_profil",
+    "title": "Page de profil",
+    "fields": [
+        {
+            "key": "field_dgt_prof_t_hero",
+            "label": "Héro",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_dgt_prof_hero_image",
+            "label": "Photo de fond",
+            "name": "hero_image",
+            "type": "image",
+            "instructions": "Photo de terrain, au moins 1600px de large.",
+            "required": 1,
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg,jpeg,png,webp"
+        },
+        {
+            "key": "field_dgt_prof_hero_credit",
+            "label": "Crédit photo",
+            "name": "hero_credit",
+            "type": "text",
+            "instructions": "Facultatif. Nom de l'athlète et lieu de la photo."
+        },
+        {
+            "key": "field_dgt_prof_hero_surtitre",
+            "label": "Surtitre",
+            "name": "hero_surtitre",
+            "type": "text",
+            "instructions": "Ex. « Vous êtes athlète »."
+        },
+        {
+            "key": "field_dgt_prof_hero_titre",
+            "label": "Titre",
+            "name": "hero_titre",
+            "type": "text",
+            "required": 1,
+            "instructions": "6 à 9 mots. Partie en vert entre <em> et </em>. Retour à la ligne forcé : <br>."
+        },
+        {
+            "key": "field_dgt_prof_hero_chapo",
+            "label": "Chapô",
+            "name": "hero_chapo",
+            "type": "textarea",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_dgt_prof_hero_bouton",
+            "label": "Bouton secondaire",
+            "name": "hero_bouton",
+            "type": "link",
+            "instructions": "Le bouton « Parlons de votre projet » est fixe.",
+            "return_format": "array"
+        },
+        {
+            "key": "field_dgt_prof_t_sections",
+            "label": "Sections",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_dgt_prof_sections",
+            "label": "Sections",
+            "name": "sections",
+            "type": "flexible_content",
+            "instructions": "Ajoutez, retirez et réordonnez les sections. Alternez les fonds clairs et sombres.",
+            "button_label": "Ajouter une section",
+            "layouts": {
+                "layout_dgt_constat": {
+                    "key": "layout_dgt_constat",
+                    "name": "constat",
+                    "label": "Constat",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_dgt_constat_fond",
+                            "label": "Fond",
+                            "name": "fond",
+                            "type": "select",
+                            "choices": {
+                                "clair": "Clair",
+                                "blanc": "Blanc",
+                                "sombre": "Encre",
+                                "bleu": "Bleu-nuit"
+                            },
+                            "default_value": "clair",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_dgt_constat_surtitre",
+                            "label": "Surtitre",
+                            "name": "surtitre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_constat_phrase",
+                            "label": "Phrase atténuée",
+                            "name": "phrase",
+                            "type": "text",
+                            "instructions": "Ce que le lecteur dit ou pense."
+                        },
+                        {
+                            "key": "field_dgt_constat_titre",
+                            "label": "Phrase forte",
+                            "name": "titre",
+                            "type": "text",
+                            "instructions": "Le vrai sujet. Sert de titre à la section."
+                        },
+                        {
+                            "key": "field_dgt_constat_colonnes",
+                            "label": "Colonnes",
+                            "name": "colonnes",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Ajouter une colonne",
+                            "max": 3,
+                            "sub_fields": [
+                                {
+                                    "key": "field_dgt_constat_col_titre",
+                                    "label": "Titre",
+                                    "name": "titre",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_dgt_constat_col_texte",
+                                    "label": "Texte",
+                                    "name": "texte",
+                                    "type": "textarea",
+                                    "rows": 3,
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "layout_dgt_niveaux": {
+                    "key": "layout_dgt_niveaux",
+                    "name": "niveaux",
+                    "label": "Niveaux ou profils",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_dgt_niveaux_fond",
+                            "label": "Fond",
+                            "name": "fond",
+                            "type": "select",
+                            "choices": {
+                                "clair": "Clair",
+                                "blanc": "Blanc",
+                                "sombre": "Encre",
+                                "bleu": "Bleu-nuit"
+                            },
+                            "default_value": "bleu",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_dgt_niveaux_surtitre",
+                            "label": "Surtitre",
+                            "name": "surtitre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_niveaux_titre",
+                            "label": "Titre",
+                            "name": "titre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_niveaux_chapo",
+                            "label": "Chapô",
+                            "name": "chapo",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_dgt_niveaux_items",
+                            "label": "Cartes",
+                            "name": "items",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Ajouter une carte",
+                            "max": 4,
+                            "sub_fields": [
+                                {
+                                    "key": "field_dgt_niveaux_it_intro",
+                                    "label": "Introduction",
+                                    "name": "intro",
+                                    "type": "text",
+                                    "instructions": "Ex. « Vous êtes »."
+                                },
+                                {
+                                    "key": "field_dgt_niveaux_it_titre",
+                                    "label": "Titre",
+                                    "name": "titre",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_dgt_niveaux_it_texte",
+                                    "label": "Texte",
+                                    "name": "texte",
+                                    "type": "textarea",
+                                    "rows": 3,
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "layout_dgt_supports": {
+                    "key": "layout_dgt_supports",
+                    "name": "supports",
+                    "label": "Supports par métier",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_dgt_supports_fond",
+                            "label": "Fond",
+                            "name": "fond",
+                            "type": "select",
+                            "choices": {
+                                "clair": "Clair",
+                                "blanc": "Blanc",
+                                "sombre": "Encre",
+                                "bleu": "Bleu-nuit"
+                            },
+                            "default_value": "clair",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_dgt_supports_surtitre",
+                            "label": "Surtitre",
+                            "name": "surtitre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_supports_titre",
+                            "label": "Titre",
+                            "name": "titre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_supports_chapo",
+                            "label": "Chapô",
+                            "name": "chapo",
+                            "type": "textarea",
+                            "rows": 2,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_dgt_supports_items",
+                            "label": "Métiers",
+                            "name": "items",
+                            "type": "repeater",
+                            "instructions": "Section repérée par l'ancre #metiers.",
+                            "layout": "block",
+                            "button_label": "Ajouter un métier",
+                            "sub_fields": [
+                                {
+                                    "key": "field_dgt_supports_it_metier",
+                                    "label": "Métier",
+                                    "name": "metier",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_dgt_supports_it_probleme",
+                                    "label": "Le problème",
+                                    "name": "probleme",
+                                    "type": "textarea",
+                                    "rows": 2,
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_dgt_supports_it_support",
+                                    "label": "Le support",
+                                    "name": "support",
+                                    "type": "text",
+                                    "instructions": "Ex. « La méthode nommée »."
+                                },
+                                {
+                                    "key": "field_dgt_supports_it_texte",
+                                    "label": "Description du support",
+                                    "name": "texte",
+                                    "type": "textarea",
+                                    "rows": 4,
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "layout_dgt_methode": {
+                    "key": "layout_dgt_methode",
+                    "name": "methode",
+                    "label": "Méthode (étapes numérotées)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_dgt_methode_fond",
+                            "label": "Fond",
+                            "name": "fond",
+                            "type": "select",
+                            "choices": {
+                                "clair": "Clair",
+                                "blanc": "Blanc",
+                                "sombre": "Encre",
+                                "bleu": "Bleu-nuit"
+                            },
+                            "default_value": "clair",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_dgt_methode_surtitre",
+                            "label": "Surtitre",
+                            "name": "surtitre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_methode_titre",
+                            "label": "Titre",
+                            "name": "titre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_methode_chapo",
+                            "label": "Chapô",
+                            "name": "chapo",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_dgt_methode_etapes",
+                            "label": "Étapes",
+                            "name": "etapes",
+                            "type": "repeater",
+                            "instructions": "Numérotées automatiquement.",
+                            "layout": "block",
+                            "button_label": "Ajouter une étape",
+                            "max": 6,
+                            "sub_fields": [
+                                {
+                                    "key": "field_dgt_methode_et_titre",
+                                    "label": "Titre",
+                                    "name": "titre",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_dgt_methode_et_texte",
+                                    "label": "Texte",
+                                    "name": "texte",
+                                    "type": "textarea",
+                                    "rows": 3,
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "layout_dgt_refus": {
+                    "key": "layout_dgt_refus",
+                    "name": "refus",
+                    "label": "Ce que nous ne faisons pas",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_dgt_refus_fond",
+                            "label": "Fond",
+                            "name": "fond",
+                            "type": "select",
+                            "choices": {
+                                "clair": "Clair",
+                                "blanc": "Blanc",
+                                "sombre": "Encre",
+                                "bleu": "Bleu-nuit"
+                            },
+                            "default_value": "sombre",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_dgt_refus_surtitre",
+                            "label": "Surtitre",
+                            "name": "surtitre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_refus_titre",
+                            "label": "Titre",
+                            "name": "titre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_refus_chapo",
+                            "label": "Chapô",
+                            "name": "chapo",
+                            "type": "textarea",
+                            "rows": 2,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_dgt_refus_items",
+                            "label": "Éléments",
+                            "name": "items",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Ajouter un élément",
+                            "max": 4,
+                            "sub_fields": [
+                                {
+                                    "key": "field_dgt_refus_it_titre",
+                                    "label": "Titre",
+                                    "name": "titre",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_dgt_refus_it_texte",
+                                    "label": "Texte",
+                                    "name": "texte",
+                                    "type": "textarea",
+                                    "rows": 3,
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "layout_dgt_realisations": {
+                    "key": "layout_dgt_realisations",
+                    "name": "realisations",
+                    "label": "Réalisations",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_dgt_real_surtitre",
+                            "label": "Surtitre",
+                            "name": "surtitre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_real_titre",
+                            "label": "Titre",
+                            "name": "titre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_real_selection",
+                            "label": "Réalisations",
+                            "name": "selection",
+                            "type": "relationship",
+                            "instructions": "Quatre au plus, dans l'ordre d'affichage.",
+                            "post_type": [
+                                "realisation"
+                            ],
+                            "filters": [
+                                "search"
+                            ],
+                            "return_format": "id",
+                            "min": 0,
+                            "max": 4,
+                            "elements": [
+                                "featured_image"
+                            ]
+                        }
+                    ]
+                },
+                "layout_dgt_faq": {
+                    "key": "layout_dgt_faq",
+                    "name": "faq",
+                    "label": "Questions fréquentes",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_dgt_faq_fond",
+                            "label": "Fond",
+                            "name": "fond",
+                            "type": "select",
+                            "choices": {
+                                "clair": "Clair",
+                                "blanc": "Blanc",
+                                "sombre": "Encre",
+                                "bleu": "Bleu-nuit"
+                            },
+                            "default_value": "blanc",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_dgt_faq_surtitre",
+                            "label": "Surtitre",
+                            "name": "surtitre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_faq_titre",
+                            "label": "Titre",
+                            "name": "titre",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_dgt_faq_questions",
+                            "label": "Questions",
+                            "name": "questions",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Ajouter une question",
+                            "sub_fields": [
+                                {
+                                    "key": "field_dgt_faq_q_question",
+                                    "label": "Question",
+                                    "name": "question",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_dgt_faq_q_reponse",
+                                    "label": "Réponse",
+                                    "name": "reponse",
+                                    "type": "textarea",
+                                    "instructions": "40 à 70 mots.",
+                                    "rows": 3,
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "key": "field_dgt_prof_t_contact",
+            "label": "Bandeau de contact",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_dgt_prof_band_titre",
+            "label": "Titre",
+            "name": "bandeau_titre",
+            "type": "text"
+        },
+        {
+            "key": "field_dgt_prof_band_texte",
+            "label": "Texte",
+            "name": "bandeau_texte",
+            "type": "textarea",
+            "rows": 2,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/profil.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790800000
+}

@@ -1,0 +1,62 @@
+{
+  "key": "group_dgt_contact",
+  "title": "Page de contact",
+  "fields": [
+    { "key": "field_dgt_ct_t_hero", "label": "Héro", "name": "", "type": "tab", "placement": "top" },
+    {
+      "key": "field_dgt_ct_hero_image", "label": "Photo de fond", "name": "hero_image", "type": "image", "required": 1,
+      "return_format": "id", "preview_size": "medium", "library": "all", "mime_types": "jpg,jpeg,png,webp"
+    },
+    { "key": "field_dgt_ct_hero_surtitre", "label": "Surtitre", "name": "hero_surtitre", "type": "text", "default_value": "Contact" },
+    { "key": "field_dgt_ct_hero_titre", "label": "Titre", "name": "hero_titre", "type": "text", "required": 1, "default_value": "Tout commence par une discussion." },
+    { "key": "field_dgt_ct_hero_chapo", "label": "Chapô", "name": "hero_chapo", "type": "textarea", "rows": 3, "new_lines": "" },
+
+    { "key": "field_dgt_ct_t_form", "label": "Formulaire", "name": "", "type": "tab", "placement": "top" },
+    { "key": "field_dgt_ct_form_surtitre", "label": "Surtitre", "name": "formulaire_surtitre", "type": "text", "default_value": "Votre message" },
+    { "key": "field_dgt_ct_form_titre", "label": "Titre", "name": "formulaire_titre", "type": "text", "default_value": "Écrivez-nous." },
+    {
+      "key": "field_dgt_ct_form_aide", "label": "Aide sous le champ « Votre projet »", "name": "formulaire_aide", "type": "text",
+      "default_value": "Où vous en êtes, ce que vous visez, vos échéances. Quelques lignes suffisent."
+    },
+    {
+      "key": "field_dgt_ct_form_mention", "label": "Mention sur les données", "name": "formulaire_mention", "type": "text",
+      "instructions": "Le lien vers la politique de confidentialité est ajouté automatiquement.",
+      "default_value": "Vos coordonnées servent uniquement à vous répondre. Elles ne sont ni revendues ni utilisées pour de la prospection."
+    },
+    { "key": "field_dgt_ct_succes_titre", "label": "Message envoyé : titre", "name": "succes_titre", "type": "text", "default_value": "Message bien reçu." },
+    {
+      "key": "field_dgt_ct_succes_texte", "label": "Message envoyé : texte", "name": "succes_texte", "type": "textarea", "rows": 2, "new_lines": "",
+      "default_value": "Merci. Nous lisons chaque demande nous-mêmes et revenons vers vous rapidement, par e-mail ou par téléphone."
+    },
+
+    { "key": "field_dgt_ct_t_suite", "label": "Et ensuite", "name": "", "type": "tab", "placement": "top" },
+    { "key": "field_dgt_ct_suite_titre", "label": "Titre", "name": "suite_titre", "type": "text", "default_value": "Et ensuite ?" },
+    {
+      "key": "field_dgt_ct_suite_etapes", "label": "Étapes", "name": "suite_etapes", "type": "repeater",
+      "instructions": "Numérotées automatiquement.", "layout": "block", "button_label": "Ajouter une étape", "max": 4,
+      "sub_fields": [
+        { "key": "field_dgt_ct_suite_et_titre", "label": "Titre", "name": "titre", "type": "text" },
+        { "key": "field_dgt_ct_suite_et_texte", "label": "Texte", "name": "texte", "type": "textarea", "rows": 2, "new_lines": "" }
+      ]
+    },
+    {
+      "key": "field_dgt_ct_suite_info", "label": "", "name": "", "type": "message",
+      "message": "Les coordonnées directes (e-mail, téléphone, adresse) se modifient dans « Réglages du site »."
+    }
+  ],
+  "location": [
+    [
+      { "param": "page_template", "operator": "==", "value": "page-templates/contact.php" }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "seamless",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": ["the_content"],
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790370000
+}

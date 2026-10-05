@@ -1,0 +1,4 @@
+# Fins de ligne LF, comme les fichiers servis par le thème
+* text=auto eol=lf
+*.woff2 binary
+*.png binary
